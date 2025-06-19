@@ -1,7 +1,8 @@
-# CS50 Python – Lecture 0 Notes
-- Can use double or single quotes.
+# CS50 Python – Lecture 0 (Functions, Variables) Notes 
+
 ## 🖨️ Output
 - Syntax: `print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)`
+- Can use double or single quotes.
 - `print("Hello" + name)` concatenates, thus no space in between.
 - `print("Hello ", name)` displays separately, automatic space in between.
 - `print(f"Hello {name}")` is good to use! Eg: displays 100,000,000.00 (number formatted automatically)
@@ -25,6 +26,19 @@
     statement2
     # ...
     return value_to_return # Optional: returns a value from the function
-    
+
 - a function defination should be done before it is called.
 - or a main function may be created for the body, that might be called at the end of the program.
+
+## 🧪 Python Interactive Shell (REPL (>>> prompt))
+
+- You can run Python directly in the terminal using the interactive shell.
+- To enter it, just type: `python` on Terminal
+
+## 📝 Comments
+- for single line comments(hash #) : `# I am learning python` 
+- for multi line comments (three quotations; single '' or double "") :
+    ```python
+    ''' I am 
+        writing a
+        multiline comment. '''
