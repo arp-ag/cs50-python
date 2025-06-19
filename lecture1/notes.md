@@ -1,52 +1,78 @@
-# CS50 Python – Lecture 1 (Conditionals) Notes
-
-# 🧠 CS50 Python – Lecture 1 Notes
+# 🧠 CS50 Python – Lecture 1: Conditionals
 
 ## ⚖️ Boolean Expressions
-- `==`, `!=`, `<`, `>`, `<=`, `>=`
-- Used in `if`, `while`, etc.
-- Evaluate to `True` or `False`
+- Operators: `==`, `!=`, `<`, `>`, `<=`, `>=`
+- Used inside `if`, `while`, etc.
+- Return `True` or `False`
 
 ## 🔁 Conditionals
 - Syntax:
     ```python
     if condition1:
-        # Code for condition1
+        ...
     elif condition2:
-        # Code for condition2
+        ...
     else:
-        # Code to execute if all preceding conditions are False
-- use 'or', 'and' to compare multiple conditions.
-- supports conditions like `90 <= score < 100`
-- can write: `return True if x%2==0 else False`
+        ...
+    ```
+- Combine conditions using `and`, `or`
+- Chained comparisons supported: `90 <= score < 100`
+- One-liner conditionals:
+    ```python
+    return True if x % 2 == 0 else False
+    ```
 
-## 🎯 Match Statement (Python 3.10+)
+## 🎯 `match` Statement (Python 3.10+)
+- Used like `switch-case`
 - Syntax:
     ```python
-    match expression: #expression = variable
-    case pattern1: #pattern1 = variable_value
-        # code block 1
-    case pattern2:
-        # code block 2
-    # ...
-    case _:  # Optional: default case (wildcard)
-        # default code block
-- match...case keyword (similar to Switch...case)
-- No break statement needed. No default (instead case _: )
-- use single | for or 
+    match expression:
+        case pattern1:
+            ...
+        case pattern2:
+            ...
+        case _:
+            ...  # Default case
+    ```
+- No `break` needed
+- Use `|` for multiple matches in a case (like `case "yes" | "y":`)
 
-## 💡 From the practice questions
-- used .lower() for case-insensitivity (in deep.py)
-- used .startswith() (in bank.py)
-#### .startswith(), .endswith(), .removesuffix()
-Syntax: 
-- `string.startswith(prefix, start, end)`
-    prefix may be a tuple eg:
+## 💡 From Practice Questions
+
+### 📌 String Methods
+
+#### ✅ `.lower()`
+- Used for case-insensitive comparison
     ```python
-    text = "Hello, world!"
-    print(text.startswith(("Hi", "Hey"))) # False
-- `string.endswith(suffix, start, end)`
-- `string.removesuffix(suffix)`
-#### .split()
-Syntax:
-- `string.split(separator, maxsplit)`
+    name = input().lower()
+    ```
+
+#### ✅ `.startswith()`
+- Syntax: `string.startswith(prefix)`
+- `prefix` can be a tuple:
+    ```python
+    text = "Hello"
+    print(text.startswith(("Hi", "Hey")))  # False
+    ```
+- Optional: `string.startswith(prefix, start_index)`
+
+#### ✅ `.endswith()`
+- Syntax: `string.endswith(suffix)`
+    ```python
+    file = "image.png"
+    print(file.endswith(".png"))  # True
+    ```
+
+#### ✅ `.removesuffix()`
+- Removes a suffix if it exists
+    ```python
+    file = "hello.py"
+    print(file.removesuffix(".py"))  # "hello"
+    ```
+
+#### ✅ `.split()`
+- Syntax: `string.split(separator, maxsplit)`
+- Default: splits by whitespace
+    ```python
+    x, y, z = "7 + 3".split()  # x='7', y='+', z='3'
+    ```
