@@ -7,6 +7,10 @@
 - `print("Hello ", name)` displays separately, automatic space in between.
 - `print(f"Hello {name}")` is good to use! Eg: displays 100,000,000.00 (number formatted automatically)
 
+- `end='\n'`, `sep=' '` can be overriden when need be.
+- `sep=' '` works only when components inside print are separated by comma.
+- `print("#" * 3)` format can not be overriden with `sep`.
+
 ## 🧍 Input & Variables
 - Syntax: `variable = input("Optional prompt message")`
 - Variables are dynamically typed (no type declaration).
