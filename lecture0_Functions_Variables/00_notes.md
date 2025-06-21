@@ -1,48 +1,60 @@
-# CS50 Python – Lecture 0 (Functions, Variables) Notes 
+# 🧠 CS50 Python – Lecture 0: Functions & Variables
 
 ## 🖨️ Output
-- Syntax: `print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)`
-- Can use double or single quotes.
-- `print("Hello" + name)` concatenates, thus no space in between.
-- `print("Hello ", name)` displays separately, automatic space in between.
-- `print(f"Hello {name}")` is good to use! Eg: displays 100,000,000.00 (number formatted automatically)
+- Syntax: `print(*objects, sep=' ', end='\n', ...)`
+- Concatenation vs comma:
+    ```python
+    print("Hello" + name)      # No space
+    print("Hello", name)       # With space
+    print(f"Hello {name}")     # Formatted string
+    ```
+- Custom separators and endings:
+    ```python
+    print("cat", "dog", sep="--")     # cat--dog
+    print("hello", end="")            # No newline
+    ```
 
-- `end='\n'`, `sep=' '` can be overriden when need be.
-- `sep=' '` works only when components inside print are separated by comma.
-- `print("#" * 3)` format can not be overriden with `sep`.
+- Repetition:
+    ```python
+    print("#" * 3)  # Output: ###
+    ```
 
 ## 🧍 Input & Variables
-- Syntax: `variable = input("Optional prompt message")`
-- Variables are dynamically typed (no type declaration).
-- Eg: `name = input("What's your name?")`
-
-## 🧱 Functions & Structure
-- Syntax: 
+- Syntax: `variable = input("Prompt")`
+- Python is dynamically typed.
     ```python
-    def function_name(parameter1, parameter2, ...):
-    """
-    Docstring: A brief description of what the function does,
-    its parameters, and what it returns.
-    """
-    # Function body: Code to be executed when the function is called
-    # This part must be indented
-    statement1
-    statement2
-    # ...
-    return value_to_return # Optional: returns a value from the function
+    name = input("What's your name? ")
+    ```
 
-- a function defination should be done before it is called.
-- or a main function may be created for the body, that might be called at the end of the program.
+## 🧱 Function Structure
+- Syntax:
+    ```python
+    def function_name(param1, param2):
+        """Optional docstring"""
+        # Code block
+        return value
+    ```
 
-## 🧪 Python Interactive Shell (REPL (>>> prompt))
+- Define before calling.
+- Use `main()` to organize code:
+    ```python
+    def main():
+        ...
 
-- You can run Python directly in the terminal using the interactive shell.
-- To enter it, just type: `python` on Terminal
+    if __name__ == "__main__":
+        main()
+    ```
+
+## 🧪 Interactive Shell (REPL)
+- Type `python` in terminal to open shell.
+- Use `exit()` or `Ctrl+D` to exit.
 
 ## 📝 Comments
-- for single line comments(hash #) : `# I am learning python` 
-- for multi line comments (three quotations; single '' or double "") :
+- Single-line: `# comment`
+- Multi-line:
     ```python
-    ''' I am 
-        writing a
-        multiline comment. '''
+    '''
+    This is a
+    multi-line comment
+    '''
+    ```
