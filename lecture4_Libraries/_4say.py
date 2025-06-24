@@ -2,7 +2,7 @@
 # PACKAGES:
 # third party libraries
 # module in a folder
-# pypi.org
+# pypi.org [PyPI: python package manager]
 # cowsay - cow say smtg on screen
 # PIP:
 # package manager
